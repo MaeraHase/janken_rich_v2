@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/sample.css">
+    <title>じゃんけん</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>⭐️じゃんけん⭐️</h1>
+        <h2 class="kimi">きみの出す手を選んでね</h2>
+    </header>
+
+    <main>
+      <table>
+<tr class="imgs1">
+  <td id="jankengu"><img src="img/ドラ_グー.jpg" onclick="jankengu" width="300">
+  <p class="gu">グー</p></td>
+  <td id="jankenchoki"><img src="img/チョッパー_チョキ.png" onclick="jankenchoki" width="300">
+    <p class="choki">チョキ</p></td>
+    <td id="jankenpa"><img src="img/ピカ_パー.jpg" onclick="jankenpa" width="300">
+      <p class="pa">パー</p></td>
+</tr>
+
+      </table>
+      
+        <!-- <ul>
+            <li id="jankengu">グー</li>
+            <li id="jankenchoki">チョキ</li>
+            <li id="jankenpa">パー</li>
+        </ul> -->
+        <div class="じゃんけんぽん">じゃんけん<span id="pc_hands">　ぽん！</span></div>
+        <div id="result"></div>
+        <img id="mypic" src="" alt="">
+    </main>
+    <footer></footer>
+
+<script>
+
+$("#jankengu").on("click", function () {
+console.log("guclick");
+janken(0)
+})
+$("#jankenchoki").on("click", function () {
+console.log("chokiclick");
+janken(1)
+})
+$("#jankenpa").on("click", function () {
+console.log("paclick");
+janken(2)
+})
+
+// function click(number){
+//     // console.log("click",number)
+// }
+
+
+
+function janken(user_num){
+        var npc_num = Math.floor(Math.random() * 3);
+      
+        var resultHTML = "";
+      
+      resultHTML += '<p id="you">' + "あなた" + '</p>: ' + changeText(user_num) + '<p id="vs">' + "  VS "  + '</p> ' + '<p id="them">' + " 相手 "+ '</p>: ' + changeText(npc_num) ;
+      
+        // 勝ち負け判定
+        if(user_num == npc_num) {
+          // 引き分け
+          resultHTML += '<br><p id="tie">' + "引き分け" + '</p>';
+          document.getElementById("mypic").src='img/引き分け.png';
+        } else if((user_num == 0 && npc_num == 1)||(user_num == 1 && npc_num == 2)||(user_num == 2 && npc_num == 0)) {
+          // 勝ち
+          resultHTML += '<br><p id="win">' + "勝ち!!" + '</p>';
+          document.getElementById("mypic").src='img/あなたの勝ち.jpg';
+        } else {
+          // 負け
+          resultHTML += '<br><p id="lose">' + "負け..." + '</p>';
+          document.getElementById("mypic").src='img/あなたの負け.jpg';
+        }
+      
+        // 結果出力
+        document.getElementById("result").innerHTML = resultHTML;
+      }
+      
+    
+      function changeText(num){
+        var item = "";
+        switch (num){
+          case 0: item = '<p id="gu">' + "グー" +'</p>'; break;
+          case 1: item = '<p id="choki">' + "チョキ" +'</p>'; break;
+          case 2: item = '<p id="pa">' +"パー" +'</p>'; break;
+          default: item = "不正な値を検出";
+        }
+        return item;
+      }
+    </script>
+<script>
+
+
+   
+</script> 
+</body>
+
+</html>

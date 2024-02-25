@@ -1,0 +1,133 @@
+body{
+    margin:0;
+    padding:0;
+    text-align:left;
+    font-size: 32px;
+}
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+main{
+    border-bottom:1px solid #ccc;
+}
+footer{
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+}
+h1{
+    font-family: 'ヒラギノ丸ゴ Pro';
+    font-weight: bolder;
+    font-size: 30pt;
+}
+.kimi{
+    font-family: 'ヒラギノ丸ゴ Pro';
+    font-size: 20pt;
+    
+}
+table{
+    margin: auto;
+    text-align: center;
+}
+/* 画像を丸くできるコード */
+/* img.gu{
+  border-radius:50%; 
+} */
+#you, #them{
+    font-family: 'ヒラギノ丸ゴ Pro';
+    display: inline-block;
+}
+#vs{
+    font-family: 'ヒラギノ丸ゴ Pro';
+    display: inline-block;
+}
+#gu{
+    font-family: 'ヒラギノ丸ゴ Pro';
+    display: inline-block;
+    font-size: 30pt;
+    color: #0066CC;
+}
+#choki{
+    font-family: 'ヒラギノ丸ゴ Pro';
+    display: inline-block;
+    font-size: 30pt;
+    color: #dc0000;
+}
+#pa{
+    font-family: 'ヒラギノ丸ゴ Pro';
+    display: inline-block;
+    font-size: 30pt;
+    color: #ebdd15;
+}
+/* 結果 */
+#tie{
+    font-family: 'ヒラギノ丸ゴ Pro';
+    text-align: center;
+    font-size: 50pt;
+    color: #00c310;
+}
+#win{
+    font-family: 'ヒラギノ丸ゴ Pro';
+    text-align: center;
+    font-size: 60pt;
+    color: #ff56b3;
+}
+#lose{
+    font-family: 'ヒラギノ丸ゴ Pro';
+    text-align: center;
+    font-size: 50pt;
+    color: #0a0093;
+}
+img{
+    margin: auto;
+    display: block;
+    
+}
+.gu{
+    font-family: 'ヒラギノ丸ゴ Pro';
+    font-weight: bold;
+    color: #0066CC;
+}
+.choki{
+    font-family: 'ヒラギノ丸ゴ Pro';
+    font-weight: bold;
+    color: #dc0000;
+}
+.じゃんけんぽん{
+    font-family: 'ヒラギノ丸ゴ Pro';
+    text-align: center;
+}
+.pa{
+    font-family: 'ヒラギノ丸ゴ Pro';
+    font-weight: bold;
+    color: #ebdd15;
+}
+.じゃんけんぽん{
+    font-family: 'ヒラギノ丸ゴ Pro';
+}
+/* p{
+    font-size:200%;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    height:200px;
+} */
+ul{
+    padding: 0;
+    border-top: 1px solid #000000;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:100%;
+}
+li{
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+}
+li:hover{
+    background: #0066CC;
+    color:#fff;
+}
