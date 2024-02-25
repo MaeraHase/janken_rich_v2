@@ -20,11 +20,11 @@
     <main>
       <table>
 <tr class="imgs1">
-  <td id="jankengu"><img src="img/ドラ_グー.jpg" onclick="jankengu" width="300">
+  <td id="jankengu"><img src="img/img_gu.jpg" onclick="jankengu" width="300">
   <p class="gu">グー</p></td>
-  <td id="jankenchoki"><img src="img/チョッパー_チョキ.png" onclick="jankenchoki" width="300">
+  <td id="jankenchoki"><img src="img/img_choki.png" onclick="jankenchoki" width="300">
     <p class="choki">チョキ</p></td>
-    <td id="jankenpa"><img src="img/ピカ_パー.jpg" onclick="jankenpa" width="300">
+    <td id="jankenpa"><img src="img/img_pa.jpg" onclick="jankenpa" width="300">
       <p class="pa">パー</p></td>
 </tr>
 
@@ -40,7 +40,6 @@
         <img id="mypic" src="" alt="">
     </main>
     <footer></footer>
-
 <script>
 
 $("#jankengu").on("click", function () {
@@ -73,19 +72,20 @@ function janken(user_num){
         if(user_num == npc_num) {
           // 引き分け
           resultHTML += '<br><p id="tie">' + "引き分け" + '</p>';
-          document.getElementById("mypic").src='img/引き分け.png';
+          document.getElementById("mypic").src='img/img_tie.png';
         } else if((user_num == 0 && npc_num == 1)||(user_num == 1 && npc_num == 2)||(user_num == 2 && npc_num == 0)) {
           // 勝ち
           resultHTML += '<br><p id="win">' + "勝ち!!" + '</p>';
-          document.getElementById("mypic").src='img/あなたの勝ち.jpg';
+          document.getElementById("mypic").src='img/img_win.jpg';
         } else {
           // 負け
           resultHTML += '<br><p id="lose">' + "負け..." + '</p>';
-          document.getElementById("mypic").src='img/あなたの負け.jpg';
+          document.getElementById("mypic").src='img/img_lose.jpg';
         }
       
         // 結果出力
         document.getElementById("result").innerHTML = resultHTML;
+        
       }
       
     

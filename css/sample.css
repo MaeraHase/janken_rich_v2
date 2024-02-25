@@ -9,13 +9,12 @@ header{
     border-bottom: 1px solid #ccc;
     text-align: center;
 }
-
 main{
     border-bottom:1px solid #ccc;
 }
 footer{
     background-color: #fff;
-    border-bottom:1px solid #ccc;
+    border-bottom:100px solid #ffffff;
     text-align: center;
 }
 h1{
